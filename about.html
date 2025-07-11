@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>About Us - Blaze</title>
+    <meta name="description" content="About blaze. Moroccan streetwear brand. Learn about our story, mission, and values.">
+    <link rel="icon" href="img/favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <h1>blaze.</h1>
+        </div>
+        <div class="header-actions">
+            <div class="cart-icon" id="cart-icon">
+                <span>cart</span>
+                <span class="cart-count" id="cart-count">0</span>
+            </div>
+            <div class="hamburger-menu" id="hamburger-menu">
+                <div class="hamburger-dot"></div>
+                <div class="hamburger-dot"></div>
+                <div class="hamburger-dot"></div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Cart Dropdown -->
+    <div class="cart-dropdown" id="cart-dropdown">
+        <div class="cart-header">
+            <h3>Shopping Cart</h3>
+            <button class="close-cart" id="close-cart">×</button>
+        </div>
+        <div class="cart-items" id="cart-items">
+            <!-- Cart items will be dynamically added here -->
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total: </span>
+                <span id="cart-total">0 Dh</span>
+            </div>
+            <button class="checkout-btn">Checkout</button>
+        </div>
+    </div>
+
+    <!-- Dropdown Menu -->
+    <div class="dropdown-menu" id="dropdown-menu">
+        <div class="menu-content">
+            <div class="menu-logo">
+                <h1>blaze.</h1>
+            </div>
+            <nav class="menu-nav">
+                <ul class="nav-list">
+                    <li><a href="index.html#products">Products</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <main class="main-content">
+        <div class="about-container">
+            <h2 class="section-title">About Us</h2>
+            <div class="about-content">
+                <p>Welcome to <strong>blaze.</strong> – where passion meets style. We are a Moroccan streetwear brand dedicated to creating unique, high-quality t-shirts that inspire confidence and creativity. Our designs are crafted with care, blending bold graphics and premium fabrics for a look that stands out and feels great.</p>
+                <p>Founded by young creatives, blaze. is more than just a clothing label – it's a movement. We believe in self-expression, authenticity, and the power of community. Every piece is designed to help you tell your story and embrace your individuality.</p>
+                <p>Thank you for supporting local talent and being part of the blaze. family!</p>
+            </div>
+        </div>
+    </main>
+    <a href="index.html" class="return-home-btn">Return to Homepage</a>
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <h2>blaze.</h2>
+            </div>
+            <div class="footer-links">
+                <a href="index.html#products">Products</a>
+                <a href="contact.html">Contact</a>
+                <a href="about.html">About Us</a>
+            </div>
+            <div class="footer-copyright">
+                <p>&copy; 2024 blaze. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <style>
+        .about-container {
+            max-width: 700px;
+            margin: 60px auto 0 auto;
+            background: #000;
+            border: 2px solid #fff;
+            border-radius: 12px;
+            padding: 2.5rem 2rem;
+            color: #fff;
+            box-shadow: 0 6px 32px 0 rgba(0,0,0,0.18);
+        }
+        .about-content p {
+            font-size: 1.1rem;
+            line-height: 1.7;
+            margin-bottom: 1.5rem;
+            color: #fff;
+        }
+        .about-content strong {
+            color: #27ae60;
+        }
+        @media (max-width: 600px) {
+            .about-container {
+                padding: 1.2rem 0.7rem;
+                border-radius: 0;
+            }
+            .about-content p {
+                font-size: 1rem;
+            }
+        }
+        .return-home-btn {
+            display: block;
+            width: 100%;
+            margin: 24px auto 0 auto;
+            text-align: center;
+            background: transparent;
+            color: #fff;
+            border: 2px solid #fff;
+            border-radius: 6px;
+            padding: 12px 0;
+            font-size: 1.05rem;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            text-decoration: none;
+            transition: background 0.2s, color 0.2s;
+            max-width: 500px;
+        }
+        .return-home-btn:hover {
+            background: #fff;
+            color: #000;
+        }
+    </style>
+    <script src="script.js"></script>
+</body>
+</html> 

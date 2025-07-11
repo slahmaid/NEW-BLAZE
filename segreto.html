@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SEGRETO - Blaze</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="product-page.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <a href="index.html">
+                <h1>blaze.</h1>
+            </a>
+        </div>
+        <div class="header-actions">
+            <div class="cart-icon" id="cart-icon">
+                <span>cart</span>
+                <span class="cart-count" id="cart-count">0</span>
+            </div>
+            <div class="hamburger-menu" id="hamburger-menu">
+                <div class="hamburger-dot"></div>
+                <div class="hamburger-dot"></div>
+                <div class="hamburger-dot"></div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Cart Dropdown -->
+    <div class="cart-dropdown" id="cart-dropdown">
+        <div class="cart-header">
+            <h3>Shopping Cart</h3>
+            <button class="close-cart" id="close-cart">×</button>
+        </div>
+        <div class="cart-items" id="cart-items">
+            <!-- Cart items will be dynamically added here -->
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total: </span>
+                <span id="cart-total">0 Dh</span>
+            </div>
+            <button class="checkout-btn">Checkout</button>
+        </div>
+    </div>
+
+    <!-- Dropdown Menu -->
+    <div class="dropdown-menu" id="dropdown-menu">
+        <div class="menu-content">
+            <div class="menu-logo">
+                <h1>blaze.</h1>
+            </div>
+            <nav class="menu-nav">
+                <ul class="nav-list">
+                    <li><a href="index.html#products">Products</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#about">About Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <main class="product-page">
+        <div class="product-container">
+            <div class="product-gallery">
+                <div class="main-image">
+                    <img src="img/products/SEGRETO.webp" alt="SEGRETO - White" id="main-image">
+                </div>
+                <div class="thumbnail-images">
+                    <img src="img/products/SEGRETO.webp" alt="White" class="thumbnail active" data-variant="white">
+                    <img src="img/products/SEGRETO.webp" alt="Beige" class="thumbnail" data-variant="beige">
+                    <img src="img/products/SEGRETO.webp" alt="Black" class="thumbnail" data-variant="black">
+                </div>
+            </div>
+            
+            <div class="product-details">
+                <h1 class="product-title">SEGRETO</h1>
+                <div class="product-price">
+                    <span class="current-price">129 Dh</span>
+                    <span class="compare-price">179 Dh</span>
+                </div>
+                
+                <div class="product-info">
+                    <div class="info-item">
+                        <span class="label">Size:</span>
+                        <span class="value">One Size</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="label">Fit:</span>
+                        <span class="value">Unisex</span>
+                    </div>
+                    <div class="info-item">
+                        <span class="label">Material:</span>
+                        <span class="value">100% Cotton</span>
+                    </div>
+                </div>
+
+                <div class="variant-selector">
+                    <h3>Color Variants</h3>
+                    <div class="variant-options">
+                        <button class="variant-btn active" data-variant="white" data-color="White">
+                            <span class="color-swatch white"></span>
+                            <span class="color-name">White</span>
+                        </button>
+                        <button class="variant-btn" data-variant="beige" data-color="Beige">
+                            <span class="color-swatch beige"></span>
+                            <span class="color-name">Beige</span>
+                        </button>
+                        <button class="variant-btn" data-variant="black" data-color="Black">
+                            <span class="color-swatch black"></span>
+                            <span class="color-name">Black</span>
+                        </button>
+                    </div>
+                </div>
+
+                <div class="product-actions">
+                    <button class="add-to-cart-btn" data-product="SEGRETO" data-price="129">Add to Cart</button>
+                    <button class="order-now-btn" data-product="SEGRETO" data-price="129">Order Now</button>
+                </div>
+
+                <div class="product-description">
+                    <h3>Description</h3>
+                    <p>Discover the secret with our mysterious t-shirt featuring an enigmatic design that speaks to the hidden depths of style and sophistication. Made from 100% cotton for ultimate comfort.</p>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <h2>blaze.</h2>
+            </div>
+            <div class="footer-links">
+                <a href="index.html#products">Products</a>
+                <a href="#contact">Contact</a>
+                <a href="#about">About Us</a>
+            </div>
+            <div class="footer-copyright">
+                <p>&copy; 2024 blaze. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script src="product-page.js"></script>
+</body>
+</html> 

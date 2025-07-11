@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact - Blaze</title>
+    <meta name="description" content="Contact blaze. Moroccan streetwear brand. Get in touch for support, questions, or collaborations.">
+    <link rel="icon" href="img/favicon.ico">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <h1>blaze.</h1>
+        </div>
+        <div class="header-actions">
+            <div class="cart-icon" id="cart-icon">
+                <span>cart</span>
+                <span class="cart-count" id="cart-count">0</span>
+            </div>
+            <div class="hamburger-menu" id="hamburger-menu">
+                <div class="hamburger-dot"></div>
+                <div class="hamburger-dot"></div>
+                <div class="hamburger-dot"></div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Cart Dropdown -->
+    <div class="cart-dropdown" id="cart-dropdown">
+        <div class="cart-header">
+            <h3>Shopping Cart</h3>
+            <button class="close-cart" id="close-cart">×</button>
+        </div>
+        <div class="cart-items" id="cart-items">
+            <!-- Cart items will be dynamically added here -->
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total: </span>
+                <span id="cart-total">0 Dh</span>
+            </div>
+            <button class="checkout-btn">Checkout</button>
+        </div>
+    </div>
+
+    <!-- Dropdown Menu -->
+    <div class="dropdown-menu" id="dropdown-menu">
+        <div class="menu-content">
+            <div class="menu-logo">
+                <h1>blaze.</h1>
+            </div>
+            <nav class="menu-nav">
+                <ul class="nav-list">
+                    <li><a href="index.html#products">Products</a></li>
+                    <li><a href="contact.html">Contact</a></li>
+                    <li><a href="about.html">About Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+    <main class="main-content">
+        <div class="contact-container">
+            <h2 class="section-title">Contact Us</h2>
+            <form class="contact-form">
+                <label for="contact-name">Name</label>
+                <input type="text" id="contact-name" name="name" required>
+                <label for="contact-email">Email</label>
+                <input type="email" id="contact-email" name="email" required>
+                <label for="contact-message">Message</label>
+                <textarea id="contact-message" name="message" rows="5" required></textarea>
+                <button type="submit" class="checkout-btn">Send Message</button>
+            </form>
+            <div class="contact-info">
+                <p>Email: <a href="mailto:hello@blaze.com">hello@blaze.com</a></p>
+                <p>Instagram: <a href="https://instagram.com/" target="_blank">@blaze</a></p>
+            </div>
+        </div>
+    </main>
+    <a href="index.html" class="return-home-btn">Return to Homepage</a>
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <h2>blaze.</h2>
+            </div>
+            <div class="footer-links">
+                <a href="index.html#products">Products</a>
+                <a href="contact.html">Contact</a>
+                <a href="about.html">About Us</a>
+            </div>
+            <div class="footer-copyright">
+                <p>&copy; 2024 blaze. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+    <style>
+        .contact-container {
+            max-width: 500px;
+            margin: 60px auto 0 auto;
+            background: #000;
+            border: 2px solid #fff;
+            border-radius: 12px;
+            padding: 2.5rem 2rem;
+            color: #fff;
+            box-shadow: 0 6px 32px 0 rgba(0,0,0,0.18);
+        }
+        .contact-form label {
+            display: block;
+            margin-bottom: 6px;
+            font-weight: 600;
+        }
+        .contact-form input, .contact-form textarea {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 18px;
+            border: 1px solid #fff;
+            border-radius: 6px;
+            font-size: 1rem;
+            background: #111;
+            color: #fff;
+        }
+        .contact-form textarea:focus, .contact-form input:focus {
+            outline: 2px solid #fff;
+            background: #181818;
+        }
+        .contact-info {
+            margin-top: 2rem;
+            font-size: 1.05rem;
+            color: #fff;
+        }
+        .contact-info a {
+            color: #27ae60;
+            text-decoration: none;
+        }
+        .contact-info a:hover {
+            text-decoration: underline;
+        }
+        .return-home-btn {
+            display: block;
+            width: 100%;
+            margin: 24px auto 0 auto;
+            text-align: center;
+            background: transparent;
+            color: #fff;
+            border: 2px solid #fff;
+            border-radius: 6px;
+            padding: 12px 0;
+            font-size: 1.05rem;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            text-decoration: none;
+            transition: background 0.2s, color 0.2s;
+            max-width: 500px;
+        }
+        .return-home-btn:hover {
+            background: #fff;
+            color: #000;
+        }
+        @media (max-width: 600px) {
+            .contact-container {
+                padding: 1.2rem 0.7rem;
+                border-radius: 0;
+            }
+        }
+    </style>
+    <script src="script.js"></script>
+</body>
+</html> 

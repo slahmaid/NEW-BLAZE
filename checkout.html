@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Checkout - Blaze Portfolio</title>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="product-page.css">
+    <style>
+        .checkout-container {
+            max-width: 500px;
+            margin: 40px auto;
+            background: #000;
+            border-radius: 12px;
+            box-shadow: 0 6px 32px 0 rgba(0,0,0,0.18), 0 1.5px 6px 0 rgba(255,255,255,0.08);
+            padding: 32px 24px;
+            font-family: 'Poppins', sans-serif;
+            color: #fff;
+            border: 2px solid #fff;
+            opacity: 0;
+            transform: translateY(32px);
+            animation: fadeInUp 0.7s cubic-bezier(0.4,0,0.2,1) 0.1s forwards;
+        }
+        @keyframes fadeInUp {
+            to {
+                opacity: 1;
+                transform: none;
+            }
+        }
+        .checkout-title {
+            font-size: 2rem;
+            margin-bottom: 24px;
+            text-align: center;
+            color: #fff;
+        }
+        .checkout-header-mobile {
+            display: none;
+        }
+        .checkout-logo-link {
+            text-decoration: none;
+            color: #fff;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 56px;
+            background: rgba(0,0,0,0.92);
+            border-bottom: 1.5px solid #fff;
+        }
+        .checkout-logo-link h1 {
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            font-size: 2rem;
+            margin: 0;
+            letter-spacing: -0.02em;
+        }
+        .checkout-form label {
+            display: block;
+            margin-bottom: 6px;
+            font-weight: 600;
+            color: #fff;
+        }
+        .checkout-form input {
+            width: 100%;
+            padding: 10px;
+            margin-bottom: 18px;
+            border: 1px solid #fff;
+            border-radius: 6px;
+            font-size: 1rem;
+            background: #111;
+            color: #fff;
+        }
+        .checkout-form input:focus {
+            outline: 2px solid #fff;
+            background: #181818;
+        }
+        .order-summary {
+            background: #181818;
+            border-radius: 8px;
+            padding: 18px;
+            margin-bottom: 24px;
+            color: #fff;
+            border: 1px solid #fff;
+        }
+        .order-summary h3 {
+            margin-top: 0;
+            font-size: 1.1rem;
+            color: #fff;
+        }
+        .order-summary-list {
+            list-style: none;
+            padding: 0;
+            margin: 0 0 10px 0;
+        }
+        .order-summary-list li {
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 6px;
+            color: #fff;
+        }
+        .summary-total {
+            font-weight: bold;
+            font-size: 1.1rem;
+            display: flex;
+            justify-content: space-between;
+            color: #fff;
+        }
+        .free-delivery {
+            color: #27ae60;
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+        .cod-method {
+            background: #111;
+            border-radius: 6px;
+            padding: 10px 14px;
+            margin-bottom: 18px;
+            font-weight: 500;
+            color: #fff;
+            border: 1px solid #fff;
+            display: flex;
+            align-items: center;
+            gap: 12px;
+        }
+        .cod-method input[type="radio"] {
+            accent-color: #27ae60;
+            width: 20px;
+            height: 20px;
+            margin: 0;
+            vertical-align: middle;
+        }
+        .cod-method label {
+            margin: 0;
+            font-weight: 500;
+            color: #fff;
+            cursor: default;
+            line-height: 1.2;
+        }
+        .checkout-btn {
+            width: 100%;
+            background: #fff;
+            color: #000;
+            border: none;
+            border-radius: 6px;
+            padding: 14px;
+            font-size: 1.1rem;
+            font-family: 'Poppins', sans-serif;
+            cursor: pointer;
+            transition: background 0.2s, color 0.2s;
+            font-weight: 700;
+        }
+        .checkout-btn:hover {
+            background: #27ae60;
+            color: #fff;
+        }
+        .checkout-success {
+            text-align: center;
+            color: #27ae60;
+            font-size: 1.2rem;
+            margin-top: 18px;
+        }
+        .return-home-btn {
+            display: block;
+            width: 100%;
+            margin-top: 18px;
+            text-align: center;
+            background: transparent;
+            color: #fff;
+            border: 2px solid #fff;
+            border-radius: 6px;
+            padding: 12px 0;
+            font-size: 1.05rem;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 700;
+            text-decoration: none;
+            transition: background 0.2s, color 0.2s;
+        }
+        .return-home-btn:hover {
+            background: #fff;
+            color: #000;
+        }
+        .toggle-summary-btn {
+            display: none;
+            width: 100%;
+            margin-bottom: 10px;
+            background: #181818;
+            color: #fff;
+            border: 1px solid #fff;
+            border-radius: 6px;
+            padding: 10px 0;
+            font-size: 1rem;
+            font-family: 'Poppins', sans-serif;
+            font-weight: 600;
+            cursor: pointer;
+            transition: background 0.2s, color 0.2s;
+        }
+        .toggle-summary-btn:hover {
+            background: #fff;
+            color: #000;
+        }
+        .checkout-spinner-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100vw;
+            height: 100vh;
+            background: rgba(0,0,0,0.55);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            z-index: 9999;
+        }
+        .checkout-spinner {
+            border: 6px solid #fff;
+            border-top: 6px solid #27ae60;
+            border-radius: 50%;
+            width: 48px;
+            height: 48px;
+            animation: spin 1s linear infinite;
+        }
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+    </style>
+    <style>
+        /* Mobile-First Layout & Spacing */
+        @media (max-width: 600px) {
+            .checkout-header-mobile {
+                display: block;
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100vw;
+                z-index: 100;
+            }
+            .checkout-container {
+                margin-top: 64px;
+                max-width: 100vw;
+                margin: 0;
+                border-radius: 0;
+                padding: 18px 4vw 24px 4vw;
+                min-height: 100vh;
+                box-shadow: none;
+                border-width: 0 0 2px 0;
+            }
+            .checkout-title {
+                font-size: 1.4rem;
+                margin-bottom: 18px;
+            }
+            .order-summary {
+                padding: 12px;
+                font-size: 0.98rem;
+            }
+            .order-summary h3 {
+                font-size: 1rem;
+            }
+            .checkout-form label {
+                font-size: 1rem;
+            }
+            .checkout-form input {
+                font-size: 1.05rem;
+                padding: 13px 10px;
+                margin-bottom: 14px;
+            }
+            .cod-method {
+                padding: 10px 8px;
+                font-size: 0.98rem;
+            }
+            .checkout-btn, .return-home-btn {
+                font-size: 1.08rem;
+                padding: 15px 0;
+                margin-top: 12px;
+            }
+            .checkout-success {
+                font-size: 1.05rem;
+            }
+            .toggle-summary-btn {
+                display: block;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="checkout-header-mobile">
+        <a href="index.html" class="checkout-logo-link"><h1>blaze.</h1></a>
+    </div>
+    <div class="checkout-container">
+        <h2 class="checkout-title">Checkout</h2>
+        <form class="checkout-form" id="checkout-form">
+            <button type="button" class="toggle-summary-btn" id="toggle-summary-btn" style="display:none;">Hide Order Summary</button>
+            <div class="order-summary" id="order-summary">
+                <h3>Order Summary</h3>
+                <ul class="order-summary-list" id="order-summary-list">
+                    <!-- JS will populate this -->
+                </ul>
+                <div class="summary-total">
+                    <span>Total:</span>
+                    <span id="summary-total">0 Dh</span>
+                </div>
+                <div class="free-delivery">Free Delivery</div>
+            </div>
+            <label for="name">Name</label>
+            <input type="text" id="name" name="name" required>
+            <label for="city">City</label>
+            <input type="text" id="city" name="city" required>
+            <label for="phone">Phone Number</label>
+            <input type="tel" id="phone" name="phone" pattern="[0-9]{10,15}" inputmode="tel" required>
+            <div class="cod-method">
+                <input type="radio" id="cod" name="payment" checked disabled>
+                <label for="cod">Cash on Delivery (COD) Only</label>
+            </div>
+            <button type="submit" class="checkout-btn">Place Order</button>
+            <div class="checkout-success" id="checkout-success" style="display:none;">Thank you! Your order has been placed.</div>
+        </form>
+        <a href="index.html" class="return-home-btn">Return to Homepage</a>
+        <div class="checkout-spinner-overlay" id="checkout-spinner-overlay" style="display:none;">
+            <div class="checkout-spinner"></div>
+        </div>
+    </div>
+    <script src="checkout.js"></script>
+    <script>
+        // Collapsible Order Summary for Mobile
+        function setSummaryToggle() {
+            const btn = document.getElementById('toggle-summary-btn');
+            const summary = document.getElementById('order-summary');
+            let visible = true;
+            function updateBtn() {
+                btn.textContent = visible ? 'Hide Order Summary' : 'Show Order Summary';
+            }
+            btn.addEventListener('click', function() {
+                visible = !visible;
+                summary.style.display = visible ? '' : 'none';
+                updateBtn();
+            });
+            updateBtn();
+        }
+        function handleSummaryToggleVisibility() {
+            const btn = document.getElementById('toggle-summary-btn');
+            const summary = document.getElementById('order-summary');
+            if (window.innerWidth <= 600) {
+                btn.style.display = 'block';
+                summary.style.display = '';
+            } else {
+                btn.style.display = 'none';
+                summary.style.display = '';
+            }
+        }
+        window.addEventListener('DOMContentLoaded', function() {
+            setSummaryToggle();
+            handleSummaryToggleVisibility();
+        });
+        window.addEventListener('resize', handleSummaryToggleVisibility);
+
+        // Spinner feedback on order
+        document.addEventListener('DOMContentLoaded', function() {
+            var form = document.getElementById('checkout-form');
+            var spinner = document.getElementById('checkout-spinner-overlay');
+            var successMsg = document.getElementById('checkout-success');
+            if (form && spinner && successMsg) {
+                form.addEventListener('submit', function(e) {
+                    spinner.style.display = 'flex';
+                    setTimeout(function() {
+                        spinner.style.display = 'none';
+                        successMsg.style.display = 'block';
+                    }, 1200); // Show spinner for 1.2s before showing success
+                });
+            }
+        });
+    </script>
+</body>
+</html> 

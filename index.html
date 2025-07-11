@@ -1,0 +1,394 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blaze Portfolio</title>
+    <meta name="description" content="blaze. - Moroccan streetwear brand. Shop unique, high-quality t-shirts with bold designs and free delivery. Limited stock. Cash on Delivery.">
+    <link rel="icon" href="img/favicon.ico">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <div class="logo">
+            <h1>blaze.</h1>
+        </div>
+        <div class="header-actions">
+            <div class="cart-icon" id="cart-icon">
+                <span>cart</span>
+                <span class="cart-count" id="cart-count">0</span>
+            </div>
+            <div class="hamburger-menu" id="hamburger-menu">
+                <div class="hamburger-dot"></div>
+                <div class="hamburger-dot"></div>
+                <div class="hamburger-dot"></div>
+            </div>
+        </div>
+    </header>
+
+    <!-- Cart Dropdown -->
+    <div class="cart-dropdown" id="cart-dropdown">
+        <div class="cart-header">
+            <h3>Shopping Cart</h3>
+            <button class="close-cart" id="close-cart">×</button>
+        </div>
+        <div class="cart-items" id="cart-items">
+            <!-- Cart items will be dynamically added here -->
+        </div>
+        <div class="cart-footer">
+            <div class="cart-total">
+                <span>Total: </span>
+                <span id="cart-total">0 Dh</span>
+            </div>
+            <button class="checkout-btn">Checkout</button>
+        </div>
+    </div>
+
+    <!-- Dropdown Menu -->
+    <div class="dropdown-menu" id="dropdown-menu">
+        <div class="menu-content">
+            <div class="menu-logo">
+                <h1>blaze.</h1>
+            </div>
+            <nav class="menu-nav">
+                <ul class="nav-list">
+                    <li><a href="#products">Products</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                    <li><a href="#about">About Us</a></li>
+                </ul>
+            </nav>
+        </div>
+    </div>
+
+    <main class="main-content">
+        <div class="products-container">
+            <h2 class="section-title">Our t-shirts.</h2>
+            <div class="products-grid">
+                <div class="product-card">
+                    <a href="lost-in-casablanca.html" class="product-link">
+                        <div class="product-image">
+                            <div class="stock-badge">Limited Stock</div>
+                            <img src="img/products/Lost in Casablanca.webp" alt="Lost in Casablanca t-shirt" width="400" height="400" loading="lazy">
+                        </div>
+                    </a>
+                    <div class="product-info">
+                        <h3 class="product-title">Lost in Casablanca</h3>
+                        <div class="product-pricing">
+                            <span class="current-price">129 Dh</span>
+                            <span class="compare-price">179 Dh</span>
+                        </div>
+                        <div class="product-buttons">
+                            <button class="add-to-cart-btn" data-product="Lost in Casablanca" data-price="129">Add to Cart</button>
+                            <button class="order-now-btn" data-product="Lost in Casablanca" data-price="129">Order Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <a href="rise.html" class="product-link">
+                        <div class="product-image">
+                            <div class="stock-badge">Limited Stock</div>
+                            <img src="img/products/Rise.webp" alt="Rise t-shirt" width="400" height="400" loading="lazy">
+                        </div>
+                    </a>
+                    <div class="product-info">
+                        <h3 class="product-title">Rise</h3>
+                        <div class="product-pricing">
+                            <span class="current-price">129 Dh</span>
+                            <span class="compare-price">179 Dh</span>
+                        </div>
+                        <div class="product-buttons">
+                            <button class="add-to-cart-btn" data-product="Rise" data-price="129">Add to Cart</button>
+                            <button class="order-now-btn" data-product="Rise" data-price="129">Order Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <a href="rush.html" class="product-link">
+                        <div class="product-image">
+                            <div class="stock-badge">Limited Stock</div>
+                            <img src="img/products/Rush.webp" alt="Rush t-shirt" width="400" height="400" loading="lazy">
+                        </div>
+                    </a>
+                    <div class="product-info">
+                        <h3 class="product-title">Rush</h3>
+                        <div class="product-pricing">
+                            <span class="current-price">129 Dh</span>
+                            <span class="compare-price">179 Dh</span>
+                        </div>
+                        <div class="product-buttons">
+                            <button class="add-to-cart-btn" data-product="Rush" data-price="129">Add to Cart</button>
+                            <button class="order-now-btn" data-product="Rush" data-price="129">Order Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <a href="segreto.html" class="product-link">
+                        <div class="product-image">
+                            <div class="stock-badge">Limited Stock</div>
+                            <img src="img/products/SEGRETO.webp" alt="SEGRETO t-shirt" width="400" height="400" loading="lazy">
+                        </div>
+                    </a>
+                    <div class="product-info">
+                        <h3 class="product-title">SEGRETO</h3>
+                        <div class="product-pricing">
+                            <span class="current-price">129 Dh</span>
+                            <span class="compare-price">179 Dh</span>
+                        </div>
+                        <div class="product-buttons">
+                            <button class="add-to-cart-btn" data-product="SEGRETO" data-price="129">Add to Cart</button>
+                            <button class="order-now-btn" data-product="SEGRETO" data-price="129">Order Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <a href="trust-the-process.html" class="product-link">
+                        <div class="product-image">
+                            <div class="stock-badge">Limited Stock</div>
+                            <img src="img/products/Trust-The-Process.webp" alt="Trust The Process t-shirt" width="400" height="400" loading="lazy">
+                        </div>
+                    </a>
+                    <div class="product-info">
+                        <h3 class="product-title">Trust The Process</h3>
+                        <div class="product-pricing">
+                            <span class="current-price">129 Dh</span>
+                            <span class="compare-price">179 Dh</span>
+                        </div>
+                        <div class="product-buttons">
+                            <button class="add-to-cart-btn" data-product="Trust The Process" data-price="129">Add to Cart</button>
+                            <button class="order-now-btn" data-product="Trust The Process" data-price="129">Order Now</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product-card">
+                    <a href="wild-flowers.html" class="product-link">
+                        <div class="product-image">
+                            <div class="stock-badge">Limited Stock</div>
+                            <img src="img/products/Wild-Flowers.webp" alt="Wild Flowers t-shirt" width="400" height="400" loading="lazy">
+                        </div>
+                    </a>
+                    <div class="product-info">
+                        <h3 class="product-title">Wild Flowers</h3>
+                        <div class="product-pricing">
+                            <span class="current-price">129 Dh</span>
+                            <span class="compare-price">179 Dh</span>
+                        </div>
+                        <div class="product-buttons">
+                            <button class="add-to-cart-btn" data-product="Wild Flowers" data-price="129">Add to Cart</button>
+                            <button class="order-now-btn" data-product="Wild Flowers" data-price="129">Order Now</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Mobile Slider -->
+            <div class="products-slider">
+                <div class="slider-container">
+                    <div class="slider-track">
+                        <div class="slider-slide">
+                            <a href="lost-in-casablanca.html" class="product-link">
+                            <div class="product-image">
+                                <div class="stock-badge">Limited Stock</div>
+                                    <img src="img/products/Lost in Casablanca.webp" alt="Lost in Casablanca t-shirt" width="400" height="400" loading="lazy">
+                            </div>
+                            </a>
+                            <div class="product-info">
+                                <h3 class="product-title">Lost in Casablanca</h3>
+                                <div class="product-pricing">
+                                    <span class="current-price">129 Dh</span>
+                                    <span class="compare-price">179 Dh</span>
+                                </div>
+                                <div class="product-buttons">
+                                    <button class="add-to-cart-btn" data-product="Lost in Casablanca" data-price="129">Add to Cart</button>
+                                    <button class="order-now-btn" data-product="Lost in Casablanca" data-price="129">Order Now</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="slider-slide">
+                            <a href="rise.html" class="product-link">
+                            <div class="product-image">
+                                <div class="stock-badge">Limited Stock</div>
+                                    <img src="img/products/Rise.webp" alt="Rise t-shirt" width="400" height="400" loading="lazy">
+                            </div>
+                            </a>
+                            <div class="product-info">
+                                <h3 class="product-title">Rise</h3>
+                                <div class="product-pricing">
+                                    <span class="current-price">129 Dh</span>
+                                    <span class="compare-price">179 Dh</span>
+                                </div>
+                                <div class="product-buttons">
+                                    <button class="add-to-cart-btn" data-product="Rise" data-price="129">Add to Cart</button>
+                                    <button class="order-now-btn" data-product="Rise" data-price="129">Order Now</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="slider-slide">
+                            <a href="rush.html" class="product-link">
+                            <div class="product-image">
+                                <div class="stock-badge">Limited Stock</div>
+                                    <img src="img/products/Rush.webp" alt="Rush t-shirt" width="400" height="400" loading="lazy">
+                            </div>
+                            </a>
+                            <div class="product-info">
+                                <h3 class="product-title">Rush</h3>
+                                <div class="product-pricing">
+                                    <span class="current-price">129 Dh</span>
+                                    <span class="compare-price">179 Dh</span>
+                                </div>
+                                <div class="product-buttons">
+                                    <button class="add-to-cart-btn" data-product="Rush" data-price="129">Add to Cart</button>
+                                    <button class="order-now-btn" data-product="Rush" data-price="129">Order Now</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="slider-slide">
+                            <a href="segreto.html" class="product-link">
+                            <div class="product-image">
+                                <div class="stock-badge">Limited Stock</div>
+                                    <img src="img/products/SEGRETO.webp" alt="SEGRETO t-shirt" width="400" height="400" loading="lazy">
+                            </div>
+                            </a>
+                            <div class="product-info">
+                                <h3 class="product-title">SEGRETO</h3>
+                                <div class="product-pricing">
+                                    <span class="current-price">129 Dh</span>
+                                    <span class="compare-price">179 Dh</span>
+                                </div>
+                                <div class="product-buttons">
+                                    <button class="add-to-cart-btn" data-product="SEGRETO" data-price="129">Add to Cart</button>
+                                    <button class="order-now-btn" data-product="SEGRETO" data-price="129">Order Now</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="slider-slide">
+                            <a href="trust-the-process.html" class="product-link">
+                            <div class="product-image">
+                                <div class="stock-badge">Limited Stock</div>
+                                    <img src="img/products/Trust-The-Process.webp" alt="Trust The Process t-shirt" width="400" height="400" loading="lazy">
+                            </div>
+                            </a>
+                            <div class="product-info">
+                                <h3 class="product-title">Trust The Process</h3>
+                                <div class="product-pricing">
+                                    <span class="current-price">129 Dh</span>
+                                    <span class="compare-price">179 Dh</span>
+                                </div>
+                                <div class="product-buttons">
+                                    <button class="add-to-cart-btn" data-product="Trust The Process" data-price="129">Add to Cart</button>
+                                    <button class="order-now-btn" data-product="Trust The Process" data-price="129">Order Now</button>
+                                </div>
+                            </div>
+                        </div>
+
+                        <div class="slider-slide">
+                            <a href="wild-flowers.html" class="product-link">
+                            <div class="product-image">
+                                <div class="stock-badge">Limited Stock</div>
+                                    <img src="img/products/Wild-Flowers.webp" alt="Wild Flowers t-shirt" width="400" height="400" loading="lazy">
+                            </div>
+                            </a>
+                            <div class="product-info">
+                                <h3 class="product-title">Wild Flowers</h3>
+                                <div class="product-pricing">
+                                    <span class="current-price">129 Dh</span>
+                                    <span class="compare-price">179 Dh</span>
+                                </div>
+                                <div class="product-buttons">
+                                    <button class="add-to-cart-btn" data-product="Wild Flowers" data-price="129">Add to Cart</button>
+                                    <button class="order-now-btn" data-product="Wild Flowers" data-price="129">Order Now</button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="slider-dots">
+                    <span class="dot active" data-slide="0"></span>
+                    <span class="dot" data-slide="1"></span>
+                    <span class="dot" data-slide="2"></span>
+                    <span class="dot" data-slide="3"></span>
+                    <span class="dot" data-slide="4"></span>
+                    <span class="dot" data-slide="5"></span>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Reviews Section -->
+    <section class="reviews-section" id="reviews">
+        <div class="reviews-grid">
+            <div class="review-card">
+                <img src="img/Reviews/1.webp" alt="Customer 1" class="review-img" width="100" height="100" loading="lazy">
+                <div class="review-content">
+                    <h4 class="reviewer-name">Sara M.</h4>
+                    <p class="review-text">"Absolutely love the quality and the unique designs! Will definitely order again."</p>
+                </div>
+            </div>
+            <div class="review-card">
+                <img src="img/Reviews/2.webp" alt="Customer 2" class="review-img" width="100" height="100" loading="lazy">
+                <div class="review-content">
+                    <h4 class="reviewer-name">Yassine B.</h4>
+                    <p class="review-text">"Fast delivery and the t-shirt fits perfectly. Highly recommend Blaze!"</p>
+                </div>
+            </div>
+            <div class="review-card">
+                <img src="img/Reviews/3.webp" alt="Customer 3" class="review-img" width="100" height="100" loading="lazy">
+                <div class="review-content">
+                    <h4 class="reviewer-name">Imane K.</h4>
+                    <p class="review-text">"The print is vibrant and the fabric is super comfortable. 10/10!"</p>
+                </div>
+            </div>
+            <div class="review-card">
+                <img src="img/Reviews/4.webp" alt="Customer 4" class="review-img" width="100" height="100" loading="lazy">
+                <div class="review-content">
+                    <h4 class="reviewer-name">Omar E.</h4>
+                    <p class="review-text">"Great experience from start to finish. The packaging was also very nice."</p>
+                </div>
+            </div>
+            <div class="review-card">
+                <img src="img/Reviews/5.webp" alt="Customer 5" class="review-img" width="100" height="100" loading="lazy">
+                <div class="review-content">
+                    <h4 class="reviewer-name">Lina S.</h4>
+                    <p class="review-text">"I get compliments every time I wear my Blaze tee. Thank you!"</p>
+                </div>
+            </div>
+            <div class="review-card">
+                <img src="img/Reviews/6.webp" alt="Customer 6" class="review-img" width="100" height="100" loading="lazy">
+                <div class="review-content">
+                    <h4 class="reviewer-name">Adam R.</h4>
+                    <p class="review-text">"Top-notch service and amazing products. Will buy more for sure!"</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-content">
+            <div class="footer-logo">
+                <h2>blaze.</h2>
+            </div>
+            <div class="footer-links">
+                <a href="#products">Products</a>
+                <a href="contact.html">Contact</a>
+                <a href="about.html">About Us</a>
+            </div>
+            <div class="footer-copyright">
+                <p>&copy; 2024 blaze. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html> 
